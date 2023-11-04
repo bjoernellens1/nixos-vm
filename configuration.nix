@@ -35,6 +35,9 @@
 
   virtualisation.docker.enable = true;
   services.qemuGuest.enable = true;
+
+  # to enable proxmox network settings
+  services.cloud-init.network.enable = true;
   
   system.stateVersion = "23.11";
 
