@@ -24,6 +24,14 @@
     fsType = "ext4";
   };
 
+  environment.systemPackages = with pkgs; [
+    vim
+    git
+    nano
+    helix
+    k3d
+  ];
+
   users.users.bjoern = {
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" ];
