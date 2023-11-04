@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ "qemu-guest.nix" ];
+  imports = [ ];
 
   services.openssh.enable = true;
 
@@ -16,13 +16,15 @@
     "console=ttyS0,115200"
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  #For this must find out how to build for ovmf
+  #boot.loader.systemd-boot.enable = true;
+  #boot.loader.efi.canTouchEfiVariables = true;
   
-  fileSystems."/" = {
-    device = "/dev/vda1";
-    fsType = "ext4";
-  };
+#  fileSystems."/" = {
+#  
+#    device = "/dev/vda1";
+#    fsType = "ext4";
+#  };
 
   environment.systemPackages = with pkgs; [
     vim
@@ -38,7 +40,7 @@
     packages = with pkgs; [
       
     ];
-    initialHashedPassword = $y$j9T$CYpeSdeCfTNi/FiiOn8dj/$W0eHq9U/WKgODUgNXPnS2AzS5GW9Km8O2dwgqSyW4fA;
+    initialHashedPassword = "$y$j9T$CYpeSdeCfTNi/FiiOn8dj/$W0eHq9U/WKgODUgNXPnS2AzS5GW9Km8O2dwgqSyW4fA" ;
   };
 
   virtualisation.docker.enable = true;

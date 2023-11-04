@@ -3,7 +3,7 @@
 
 ## Produce KVM image for proxmox
 ```
-nix run github:nix-community/nixos-generators -- --format proxmox --configuration configuration.nix
+nix run github:nix-community/nixos-generators -- --format proxmox --configuration configuration.nix -I nixpkgs=channel:nixos-23.05
 ```
 
 ### Deploy on proxmox
