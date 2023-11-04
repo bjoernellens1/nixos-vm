@@ -32,3 +32,6 @@ add following to configuration.nix
   ];
 }
 ```
+
+## References
+https://nixos.wiki/wiki/Proxmox_Virtual_Environment
